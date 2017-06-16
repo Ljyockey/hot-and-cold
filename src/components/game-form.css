@@ -1,0 +1,44 @@
+label, input, button {
+	display: block;
+}
+
+fieldset {
+	border: none;
+	height: 200px;
+}
+
+label {
+	background-color: #cc324b;
+}
+
+label {
+	width: 100%;
+}
+
+label, input, button {
+	height: 30px;
+	margin-top: 30px;
+	color: white;
+	font-size: 1.2em;
+}
+
+input, button {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input {
+	background-color: #50597b;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+button {
+	background-color: #1f253d;
+	color: white;
+}
+
+button:hover, button:focus {
+	border-color: #cc324b;
+}

@@ -3,6 +3,8 @@ import GameForm from './game-form';
 import ResetButton from './reset-button';
 import Description from './description';
 
+import './Board.css';
+
 export default class Board extends React.Component {
 	constructor(props) {
 		super(props);
@@ -11,7 +13,8 @@ export default class Board extends React.Component {
 				Math.floor(Math.random()*(100-1+1)+1),
 			latestGuess: 0,
 			tries: 0,
-			hotOrCold: ''
+			hotOrCold: '',
+			previousGuesses: []
 		};
 	}
 
@@ -20,6 +23,12 @@ export default class Board extends React.Component {
 			latestGuess: value,
 			tries: this.state.tries +=1
 		});
+		//adds commas and space if not first guess
+		if (this.state.previousGuesses.length !== 0) {
+			this.state.previousGuesses.unshift(`${value}, `);
+		} else {
+			this.state.previousGuesses.push(`${value}`);
+		}
 		//gets difference between guess and correct answer
 		var checker = 
 			(value > this.state.randomNumber) ?
@@ -44,7 +53,8 @@ export default class Board extends React.Component {
 				Math.floor(Math.random()*(100-1+1)+1),
 			latestGuess: 0,
 			tries: 0,
-			hotOrCold: ''
+			hotOrCold: '',
+			previousGuesses: []
 		});
 	}
 
@@ -56,8 +66,11 @@ export default class Board extends React.Component {
 					<GameForm sendGuess={value => this.checkGuess(value)}/>
 					<ResetButton resetClick={value => this.resetGame(value)} />
 				</div>
-				<p>Tries: {this.state.tries}</p>				
-				<p>{this.state.hotOrCold}</p>
+				<div className="info">
+					<p>Tries: {this.state.tries}</p>
+					<p>Previous Guesses: {this.state.previousGuesses}</p>				
+					<p className="hot-or-cold">{this.state.hotOrCold}</p>
+				</div>
 				<Description />
 			</div>
 			)
