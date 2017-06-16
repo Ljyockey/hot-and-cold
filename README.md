@@ -6,6 +6,6 @@ The game goes like this:</p>
   <li>You will get feedback on how close ("hot") or far ("cold") your guess is.</li>
 </ol>
 
-<p>This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).</p>
+<p>This project was bootstrapped with <a href="https://github.com/facebookincubator/create-react-app">Create React App</a>.</p>
 
-<p>You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).</p>
+<p>You can find the most recent version of this guide <a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md">here</a>.</p>
