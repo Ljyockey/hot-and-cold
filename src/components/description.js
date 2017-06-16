@@ -10,6 +10,7 @@ export default function Description(props) {
 				<li>The computer picks a random secret number between 1 to 100 and keeps it hidden.</li>
 				<li>You need to guess until you can find the hidden secret number.</li>
 				<li>You will get feedback on how close ("hot") or far ("cold") your guess is.</li>
+				<li>HINT: "hot" = +/- 10</li>
 			</ol>
 		</div>
 		);
