@@ -8,9 +8,9 @@ export default function GameForm(props) {
 		e.preventDefault();	
 		props.sendGuess(document.getElementById("guess").value)
 		document.getElementById("guess").value=""}}>
-			<label for="guess">Make your Guess!</label>
+			<label htmlFor="guess">Make your Guess!</label>
 			<input id="guess" type="number" min="1" max="100" 
-			placeholder="1-100"/>
+			placeholder="1-100" required/>
 			<button className="guess-button" type="submit">Guess</button>
 		</form>
 		)

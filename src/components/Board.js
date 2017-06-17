@@ -10,7 +10,7 @@ export default class Board extends React.Component {
 		super(props);
 		this.state = {
 			randomNumber: 
-				Math.floor(Math.random()*(100-1+1)+1),
+				Math.floor(Math.random()*(100)+1),
 			latestGuess: 0,
 			tries: 0,
 			hotOrCold: '',
@@ -21,10 +21,10 @@ export default class Board extends React.Component {
 	checkGuess(value) {
 		this.setState({
 			latestGuess: value,
-			tries: this.state.tries +=1
+			tries: this.state.tries + 1
 		});
 		//adds commas and space if not first guess
-		if (this.state.previousGuesses.length !== 0) {
+		if (this.state.previousGuesses.length > 0) {
 			this.state.previousGuesses.unshift(`${value}, `);
 		} else {
 			this.state.previousGuesses.push(`${value}`);
@@ -50,7 +50,7 @@ export default class Board extends React.Component {
 	resetGame(value) {
 		this.setState({
 			randomNumber: 
-				Math.floor(Math.random()*(100-1+1)+1),
+				Math.floor(Math.random()*(100)+1),
 			latestGuess: 0,
 			tries: 0,
 			hotOrCold: '',
