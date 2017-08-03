@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './description.css';
+
 export default function Description(props) {
 	return (
 		<div className="description">

@@ -4,6 +4,7 @@ import ResetButton from './reset-button';
 import Description from './description';
 
 import './Board.css';
+import './grid.css';
 
 export default class Board extends React.Component {
 	constructor(props) {
@@ -60,11 +61,13 @@ export default class Board extends React.Component {
 
 	render() {
 		return (
-			<div className="app-container">
+			<div className="app-container row">
+				<div className="col-md-12">
 				<h1>Hot or Cold</h1>
 				<div className="board">
 					<GameForm sendGuess={value => this.checkGuess(value)}/>
 					<ResetButton resetClick={value => this.resetGame(value)} />
+						</div>
 				</div>
 				<div className="info">
 					<p>Tries: {this.state.tries}</p>
